@@ -1,0 +1,26 @@
+{
+  "tool": "readmenator",
+  "generated_at": "2026-09-15T02:30:49Z",
+  "project_root": "/tmp/push_ShellcodeFluctuation_crosscompile_20260914_220951",
+  "files": 4,
+  "symbols": 43,
+  "imports": 7,
+  "resolved_imports": 1,
+  "security_findings": 0,
+  "languages": {
+    "py": 1,
+    "h": 1,
+    "sh": 1,
+    "c": 1
+  },
+  "entrypoints": [
+    "main.c"
+  ],
+  "start_here": "INDEX.md",
+  "workflow": [
+    "grep -n '<keyword>' INDEX.md",
+    "cat KB_<subsystem>.md",
+    "grep -n '<file>' ARCHITECTURE.md SYMBOLS.md"
+  ],
+  "regenerate": "readmenator . --rebuild"
+}
