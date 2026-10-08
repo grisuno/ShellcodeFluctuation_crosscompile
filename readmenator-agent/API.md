@@ -1,28 +1,100 @@
 # API
 
 ## header.h
-Imported by: `main.c`
-- `hookSleep` (function) `header.h:56` `bool hookSleep(void);` -- DWORD originalBytesSize; BYTE *previousBytes; DWORD previousBytesSize; } HookTrampolineBuffers; /*
-- `injectShellcode` (function) `header.h:57` `bool injectShellcode(uint8_t *sc, SIZE_T scSize, HANDLE *outThread);`
-- `readShellcode` (function) `header.h:58` `bool readShellcode(const char *path, uint8_t **out, SIZE_T *outSize);`
-- `initializeShellcodeFluctuation` (function) `header.h:59` `void initializeShellcodeFluctuation(LPVOID caller);`
-- `shellcodeEncryptDecrypt` (function) `header.h:60` `void shellcodeEncryptDecrypt(LPVOID caller);`
-- `fastTrampoline` (function) `header.h:61` `bool fastTrampoline(bool install, BYTE *target, LPVOID jump, HookTrampolineBuffers *b);`
-- `xor32` (function) `header.h:62` `void xor32(uint8_t *buf, SIZE_T sz, uint32_t key);`
-- `isShellcodeThread` (function) `header.h:63` `bool isShellcodeThread(LPVOID addr);`
+
+### hookSleep (function) `bool hookSleep(void);`
+- Defined: `header.h:56`
+- Doc: DWORD originalBytesSize; BYTE *previousBytes; DWORD previousBytesSize; } HookTrampolineBuffers; /* ---------- macros / u
+- Imported by: `main.c`
+
+### injectShellcode (function) `bool injectShellcode(uint8_t *sc, SIZE_T scSize, HANDLE *outThread);`
+- Defined: `header.h:57`
+- Imported by: `main.c`
+
+### readShellcode (function) `bool readShellcode(const char *path, uint8_t **out, SIZE_T *outSize);`
+- Defined: `header.h:58`
+- Imported by: `main.c`
+
+### initializeShellcodeFluctuation (function) `void initializeShellcodeFluctuation(LPVOID caller);`
+- Defined: `header.h:59`
+- Imported by: `main.c`
+
+### shellcodeEncryptDecrypt (function) `void shellcodeEncryptDecrypt(LPVOID caller);`
+- Defined: `header.h:60`
+- Imported by: `main.c`
+
+### fastTrampoline (function) `bool fastTrampoline(bool install, BYTE *target, LPVOID jump, HookTrampolineBuffers *b);`
+- Defined: `header.h:61`
+- Imported by: `main.c`
+
+### xor32 (function) `void xor32(uint8_t *buf, SIZE_T sz, uint32_t key);`
+- Defined: `header.h:62`
+- Imported by: `main.c`
+
+### isShellcodeThread (function) `bool isShellcodeThread(LPVOID addr);`
+- Defined: `header.h:63`
+- Imported by: `main.c`
 
 ## main.c
-Depends on: `header.h`
-- `get_return_address` (function) `main.c:3` `static inline UPTR get_return_address(void)`
-- `MySleep` (function) `main.c:18` `static void WINAPI MySleep(DWORD ms)` -- { #ifdef _WIN64 return (UPTR)__builtin_return_address(0); #else /* 32 bits – también funciona return...
-- `fastTrampoline` (function) `main.c:43` `bool fastTrampoline(bool install, BYTE *target, LPVOID jump, HookTrampolineBuffers *b)` -- b.originalBytesSize = sizeof(g_hookedSleep.sleepStub); /* des-hook temporal fastTrampoline(false, (BYTE*)Sleep...
-- `xor32` (function) `main.c:93` `void xor32(uint8_t *buf, SIZE_T sz, uint32_t key)` -- memcpy(target, b->originalBytes, b->originalBytesSize); size = b->originalBytesSize; } typeNtFlushInstructionCache...
-- `collectMemPriv` (function) `main.c:105` `static void collectMemPriv(void)`
-- `initializeShellcodeFluctuation` (function) `main.c:131` `void initializeShellcodeFluctuation(LPVOID caller)` -- (mbi.Protect & (PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_READ|PAGE_READWRITE)) ) { if (used == alloc) { alloc = alloc ?...
-- `isShellcodeThread` (function) `main.c:159` `bool isShellcodeThread(LPVOID addr)` -- g_fluctuationData.shellcodeSize = m->RegionSize; g_fluctuationData.currentlyEncrypted = false...
-- `shellcodeEncryptDecrypt` (function) `main.c:169` `void shellcodeEncryptDecrypt(LPVOID caller)` -- ExitProcess(0); } /*
-- `VEHHandler` (function) `main.c:207` `LONG NTAPI VEHHandler(PEXCEPTION_POINTERS xp)` -- VirtualProtect(g_fluctuationData.shellcodeAddr, g_fluctuationData.shellcodeSize, PAGE_NOACCESS, &old); log("[>]...
-- `readShellcode` (function) `main.c:230` `bool readShellcode(const char *path, uint8_t **out, SIZE_T *outSize)` -- #endif log("[.] AV at 0x%p", (void*)ip); UPTR base = (UPTR)g_fluctuationData.shellcodeAddr; UPTR end  = base +...
-- `runShellcode` (function) `main.c:244` `static DWORD WINAPI runShellcode(LPVOID param)` -- bool readShellcode(const char *path, uint8_t **out, SIZE_T *outSize) { HANDLE h =...
-- `injectShellcode` (function) `main.c:250` `bool injectShellcode(uint8_t *sc, SIZE_T scSize, HANDLE *outThread)`
-- `main` (function) `main.c:264` `int main(int argc, char **argv)` -- bool injectShellcode(uint8_t *sc, SIZE_T scSize, HANDLE *outThread) { void *mem =...
+
+### get_return_address (function) `static inline UPTR get_return_address(void)`
+- Defined: `main.c:3`
+- Depends on: `header.h`
+
+### MySleep (function) `static void WINAPI MySleep(DWORD ms)`
+- Defined: `main.c:18`
+- Doc: { #ifdef _WIN64 return (UPTR)__builtin_return_address(0); #else /* 32 bits – también funciona return (UPTR)__builtin_ret
+- Depends on: `header.h`
+
+### fastTrampoline (function) `bool fastTrampoline(bool install, BYTE *target, LPVOID jump, HookTrampolineBuffers *b)`
+- Defined: `main.c:43`
+- Doc: b.originalBytesSize = sizeof(g_hookedSleep.sleepStub); /* des-hook temporal fastTrampoline(false, (BYTE*)Sleep, (LPVOID)
+- Depends on: `header.h`
+
+### xor32 (function) `void xor32(uint8_t *buf, SIZE_T sz, uint32_t key)`
+- Defined: `main.c:93`
+- Doc: memcpy(target, b->originalBytes, b->originalBytesSize); size = b->originalBytesSize; } typeNtFlushInstructionCache fn; f
+- Depends on: `header.h`
+
+### collectMemPriv (function) `static void collectMemPriv(void)`
+- Defined: `main.c:105`
+- Depends on: `header.h`
+
+### initializeShellcodeFluctuation (function) `void initializeShellcodeFluctuation(LPVOID caller)`
+- Defined: `main.c:131`
+- Doc: (mbi.Protect & (PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_READ|PAGE_READWRITE)) ) { if (used == alloc) { alloc = alloc ? alloc
+- Depends on: `header.h`
+
+### isShellcodeThread (function) `bool isShellcodeThread(LPVOID addr)`
+- Defined: `main.c:159`
+- Doc: g_fluctuationData.shellcodeSize = m->RegionSize; g_fluctuationData.currentlyEncrypted = false; g_fluctuationData.encodeK
+- Depends on: `header.h`
+
+### shellcodeEncryptDecrypt (function) `void shellcodeEncryptDecrypt(LPVOID caller)`
+- Defined: `main.c:169`
+- Doc: ExitProcess(0); } /* ------------- es thread shellcode? -- bool isShellcodeThread(LPVOID addr) { MEMORY_BASIC_INFORMATIO
+- Depends on: `header.h`
+
+### VEHHandler (function) `LONG NTAPI VEHHandler(PEXCEPTION_POINTERS xp)`
+- Defined: `main.c:207`
+- Doc: VirtualProtect(g_fluctuationData.shellcodeAddr, g_fluctuationData.shellcodeSize, PAGE_NOACCESS, &old); log("[>] Flipped 
+- Depends on: `header.h`
+
+### readShellcode (function) `bool readShellcode(const char *path, uint8_t **out, SIZE_T *outSize)`
+- Defined: `main.c:230`
+- Doc: #endif log("[.] AV at 0x%p", (void*)ip); UPTR base = (UPTR)g_fluctuationData.shellcodeAddr; UPTR end  = base + g_fluctua
+- Depends on: `header.h`
+
+### runShellcode (function) `static DWORD WINAPI runShellcode(LPVOID param)`
+- Defined: `main.c:244`
+- Doc: bool readShellcode(const char *path, uint8_t **out, SIZE_T *outSize) { HANDLE h = CreateFileA(path,GENERIC_READ,FILE_SHA
+- Depends on: `header.h`
+
+### injectShellcode (function) `bool injectShellcode(uint8_t *sc, SIZE_T scSize, HANDLE *outThread)`
+- Defined: `main.c:250`
+- Depends on: `header.h`
+
+### main (function) `int main(int argc, char **argv)`
+- Defined: `main.c:264`
+- Doc: bool injectShellcode(uint8_t *sc, SIZE_T scSize, HANDLE *outThread) { void *mem = VirtualAlloc(NULL,scSize,MEM_COMMIT,PA
+- Depends on: `header.h`

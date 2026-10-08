@@ -1,12 +1,11 @@
 # Subsystem: root
 
 ## app.py
-- Doc: Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación...
 - Layer: utility
+- Doc: app.py  Autor: Gris Iscomeback Correo electrónico: grisiscomeback[at]gmail[dot]com Fecha de creación: xx/xx/xxxx Licenci
 - Language: py
 
 ## header.h
-- Doc: hookSleep: DWORD originalBytesSize; BYTE *previousBytes; DWORD previousBytesSize; }...
 - Layer: utility
 - Language: h
 - Symbols:
@@ -35,7 +34,6 @@
 - Language: sh
 
 ## main.c
-- Doc: MySleep: { #ifdef _WIN64 return (UPTR)__builtin_return_address(0); #else /* 32 bits – también...
 - Layer: utility
 - Language: c
 - Symbols:

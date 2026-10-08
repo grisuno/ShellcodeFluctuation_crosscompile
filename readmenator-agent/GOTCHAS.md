@@ -4,16 +4,10 @@
 
 These files have the most connections. Changes here have high blast radius.
 
-- `header.h` (score: 3.80, imported by 1 files)
+- `header.h` (score: 3.80)
 - `main.c` (score: 3.30)
 - `app.py` (score: 0.00)
 - `install.sh` (score: 0.00)
-
-## Blast Radius (change impact)
-
-Editing these files can break the listed number of dependents. Run their tests after any change.
-
-- `header.h` -- 1 direct, 1 total dependents
 
 ## Hotspots (complexity + centrality)
 

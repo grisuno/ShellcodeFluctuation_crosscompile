@@ -6,5 +6,9 @@
 
 ## External Imports
 
-- `app.py` -> os
-- `header.h` -> stdbool.h, stdint.h, stdio.h, stdlib.h, windows.h
+- `app.py` -> `os`
+- `header.h` -> `stdbool.h`
+- `header.h` -> `stdint.h`
+- `header.h` -> `stdio.h`
+- `header.h` -> `stdlib.h`
+- `header.h` -> `windows.h`

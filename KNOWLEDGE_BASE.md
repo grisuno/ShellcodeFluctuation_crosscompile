@@ -12,7 +12,7 @@
 **Total Files Parsed:** 4 | **Total Symbols Extracted:** 31 | **Total Imports:** 7
  | **Resolved Imports:** 1
 
-<!-- ranking_model: v1.0 | weights: {ppr:0.45,auth:0.2,test:0.15,doc:0.1,fresh:0.1} | alpha:0.85 | commit:1e0fd0b | date:2026-07-18 -->
+<!-- ranking_model: v1.0 | weights: {ppr:0.45,auth:0.2,test:0.15,doc:0.1,fresh:0.1} | alpha:0.85 | commit:05a4468 | date:2026-07-18 -->
 
 
 ## Table of Contents
@@ -27,13 +27,12 @@
 8. [Change Impact Analysis](#change-impact-analysis)
 9. [Suggested Linting Rules](#suggested-linting-rules)
 10. [Dataflow Analysis](#dataflow-analysis)
-11. [Concept Graph](#concept-graph)
-12. [Orphans](#orphans)
-13. [Query Recipes](#query-recipes)
-14. [Structural Knowledge Map](#structural-knowledge-map)
-15. [UML Class Diagram](#uml-class-diagram)
-16. [Code Property Graph](#code-property-graph)
-17. [Architecture Reference](#architecture-reference)
+11. [Orphans](#orphans)
+12. [Query Recipes](#query-recipes)
+13. [Structural Knowledge Map](#structural-knowledge-map)
+14. [UML Class Diagram](#uml-class-diagram)
+15. [Code Property Graph](#code-property-graph)
+16. [Architecture Reference](#architecture-reference)
     - [C (1 files)](#c-1-files)
     - [H (1 files)](#h-1-files)
     - [PY (1 files)](#py-1-files)
@@ -161,95 +160,6 @@ Procedural intra-function dataflow findings (zero tokens, regex-based heuristics
 | File | Function | Line | Kind | Variable | Description |
 |------|----------|------|------|----------|-------------|
 | `main.c` | `readShellcode` | 236 | `UNCHECKED_ALLOC` | `buf` | Result of allocator stored in `buf` is never checked against NULL. |
-
----
-
-## Concept Graph
-
-Semantic second-brain layer: nouns are concept nodes, verbs are edges. Each noun maps atomically to a file set (EXTRACTED); each verb aggregates structural imports, calls, and inherits into consumes, invokes, extends, depends_on, or bridges (INFERRED).
-
-**30 concepts, 100 relations.**
-
-| Concept | Files | Mentions |
-|---------|-------|----------|
-| `shellcode` | 2 | 28 |
-| `fluctuation` | 2 | 27 |
-| `size` | 2 | 27 |
-| `data` | 2 | 18 |
-| `sleep` | 2 | 15 |
-| `bytes` | 2 | 11 |
-| `read` | 2 | 10 |
-| `log` | 2 | 9 |
-| `protect` | 2 | 9 |
-| `thread` | 2 | 9 |
-| `dword` | 2 | 8 |
-| `fluctuate` | 2 | 7 |
-| `hook` | 2 | 7 |
-| `hooked` | 2 | 7 |
-| `original` | 2 | 7 |
-| `trampoline` | 2 | 7 |
-| `uptr` | 2 | 7 |
-| `byte` | 2 | 5 |
-| `decrypt` | 2 | 5 |
-| `type` | 2 | 5 |
-| `else` | 2 | 4 |
-| `encrypt` | 2 | 4 |
-| `fast` | 2 | 4 |
-| `metadata` | 2 | 4 |
-| `globales` | 2 | 3 |
-| `inject` | 2 | 3 |
-| `ifdef` | 2 | 2 |
-| `initialize` | 2 | 2 |
-| `win64` | 2 | 2 |
-| `xor32` | 2 | 2 |
-
-### Verb Edges
-
-| Source | Verb | Target | Strength | Evidence |
-|--------|------|--------|----------|----------|
-| `byte` | `consumes` | `bytes` | 1.00 | 1 |
-| `byte` | `depends_on` | `bytes` | 1.00 | 1 |
-| `byte` | `consumes` | `data` | 1.00 | 1 |
-| `byte` | `depends_on` | `data` | 1.00 | 1 |
-| `byte` | `consumes` | `decrypt` | 1.00 | 1 |
-| `byte` | `depends_on` | `decrypt` | 1.00 | 1 |
-| `byte` | `consumes` | `dword` | 1.00 | 1 |
-| `byte` | `depends_on` | `dword` | 1.00 | 1 |
-| `byte` | `consumes` | `else` | 1.00 | 1 |
-| `byte` | `depends_on` | `else` | 1.00 | 1 |
-| `byte` | `consumes` | `encrypt` | 1.00 | 1 |
-| `byte` | `depends_on` | `encrypt` | 1.00 | 1 |
-| `byte` | `consumes` | `fast` | 1.00 | 1 |
-| `byte` | `depends_on` | `fast` | 1.00 | 1 |
-| `byte` | `consumes` | `fluctuate` | 1.00 | 1 |
-| `byte` | `depends_on` | `fluctuate` | 1.00 | 1 |
-| `byte` | `consumes` | `fluctuation` | 1.00 | 1 |
-| `byte` | `depends_on` | `fluctuation` | 1.00 | 1 |
-| `byte` | `consumes` | `globales` | 1.00 | 1 |
-| `byte` | `depends_on` | `globales` | 1.00 | 1 |
-| `byte` | `consumes` | `hook` | 1.00 | 1 |
-| `byte` | `depends_on` | `hook` | 1.00 | 1 |
-| `byte` | `consumes` | `hooked` | 1.00 | 1 |
-| `byte` | `depends_on` | `hooked` | 1.00 | 1 |
-| `byte` | `consumes` | `ifdef` | 1.00 | 1 |
-| `byte` | `depends_on` | `ifdef` | 1.00 | 1 |
-| `byte` | `consumes` | `initialize` | 1.00 | 1 |
-| `byte` | `depends_on` | `initialize` | 1.00 | 1 |
-| `byte` | `consumes` | `inject` | 1.00 | 1 |
-| `byte` | `depends_on` | `inject` | 1.00 | 1 |
-
-### Dialectic Prompts
-
-- Thesis: `byte` centralizes 2 files; Antithesis: `bytes` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `data` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `decrypt` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `dword` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `else` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `encrypt` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `fast` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `fluctuate` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `fluctuation` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
-- Thesis: `byte` centralizes 2 files; Antithesis: `globales` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?
 
 ---
 
