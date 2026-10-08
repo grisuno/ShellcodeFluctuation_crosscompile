@@ -1,0 +1,1288 @@
+{
+  "concepts": [
+    {
+      "name": "shellcode",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 28,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "fluctuation",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 27,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "size",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 27,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "data",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 18,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "sleep",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 15,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "bytes",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 11,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "read",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 10,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "log",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 9,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "protect",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 9,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "thread",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 9,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "dword",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 8,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "fluctuate",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "hook",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "hooked",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "original",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "trampoline",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "uptr",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 7,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "byte",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "decrypt",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "type",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 5,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "else",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 4,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "encrypt",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 4,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "fast",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 4,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "metadata",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 4,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "globales",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 3,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "inject",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 3,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "ifdef",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "initialize",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "win64",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    },
+    {
+      "name": "xor32",
+      "files": [
+        "header.h",
+        "main.c"
+      ],
+      "mentions": 2,
+      "confidence": "EXTRACTED"
+    }
+  ],
+  "relations": [
+    {
+      "source": "byte",
+      "target": "bytes",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "bytes",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "data",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "data",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "decrypt",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "decrypt",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "dword",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "dword",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "else",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "else",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "encrypt",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "encrypt",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "fast",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "fast",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "fluctuate",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "fluctuate",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "fluctuation",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "fluctuation",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "globales",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "globales",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "hook",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "hook",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "hooked",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "hooked",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "ifdef",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "ifdef",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "initialize",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "initialize",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "inject",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "inject",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "log",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "log",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "metadata",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "metadata",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "original",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "original",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "protect",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "protect",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "read",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "shellcode",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "shellcode",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "size",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "size",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "sleep",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "sleep",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "thread",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "thread",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "trampoline",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "trampoline",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "type",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "type",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "uptr",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "uptr",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "win64",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "win64",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "xor32",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "byte",
+      "target": "xor32",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "byte",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "byte",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "data",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "data",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "decrypt",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "decrypt",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "dword",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "dword",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "else",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "else",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "encrypt",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "encrypt",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "fast",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "fast",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "fluctuate",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "fluctuate",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "fluctuation",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "fluctuation",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "globales",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "globales",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "hook",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "hook",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "hooked",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "hooked",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "ifdef",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "ifdef",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "initialize",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "initialize",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "inject",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "inject",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "log",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "log",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "metadata",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "metadata",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "original",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "original",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "protect",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "protect",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "read",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "read",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "shellcode",
+      "verb": "consumes",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    },
+    {
+      "source": "bytes",
+      "target": "shellcode",
+      "verb": "depends_on",
+      "strength": 1.0,
+      "confidence": "INFERRED",
+      "evidence": [
+        "main.c->header.h"
+      ]
+    }
+  ],
+  "dialectic": [
+    "Thesis: `byte` centralizes 2 files; Antithesis: `bytes` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `data` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `decrypt` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `dword` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `else` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `encrypt` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `fast` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `fluctuate` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `fluctuation` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?",
+    "Thesis: `byte` centralizes 2 files; Antithesis: `globales` pulls 2 files with 2 shared (Jaccard 1.00); Synthesis: should they merge, split by layer, or keep `consumes` explicit?"
+  ]
+}
